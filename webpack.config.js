@@ -1,3 +1,5 @@
+const port = process.env.PORT || 8085
+
 module.exports = {
   entry: ['./src/index.js'],
   output: {
@@ -20,6 +22,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   devServer: {
+    port,
     historyApiFallback: true,
     contentBase: './',
     watchOptions: {
